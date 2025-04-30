@@ -1,0 +1,45 @@
+Projet3Web
+
+Avant de déployer cette application, assurez-vous que les éléments suivants sont disponibles sur le
+serveur :
+- Serveur Web (Apache ou Nginx)
+- PHP 7.4 ou sup'rieur
+- Serveur MySQL/MariaDB
+- Acc's FTP ou SSH
+- Navigateur web moderne
+Installation
+
+1. Cloner le dépôt
+Connectez-vous ' votre serveur, placez-vous dans le r'pertoire www ou htdocs de votre serveur web,
+puis ex'cutez :
+ git clone https://github.com/LeoC76/Projet3Web.git
+ou t'l'chargez le ZIP via GitHub, puis d'compressez-le sur le serveur.
+
+2. Configuration de la base de données
+- Cr'ez une base de donn'es MySQL sur votre serveur.
+- Importez le fichier formation.sql dans votre base de donn'es via phpMyAdmin ou la ligne de
+commande :
+ mysql -u utilisateur -p nom_base < chemin/vers/formation.sql
+- Ouvrez le fichier de configuration (ex. config.php, bdd.php ou similaire) et modifiez les param'tres
+de connexion ' la base :
+ $host = 'localhost';
+ $dbname = 'nom_base';
+ $user = 'utilisateur';
+ $password = 'motdepasse';
+
+3. Configurer les droits
+ chmod -R 755 Projet3Web/
+4. Acc'der ' l'application
+Ouvrez un navigateur web et acc'dez ' l'URL :
+http://votre-serveur/Projet3Web/
+Structure du projet
+- /assets/ : Fichiers CSS, JS, images
+- /pages/ : Pages PHP principales
+- /includes/ : Fichiers d'inclusion (header, footer, config)
+- index.php : Page d'accueil
+Fonctionnalit's
+- Authentification
+- Navigation dynamique
+- [Autres fonctionnalit's ' pr'ciser selon le projet]
+Auteur
+D'velopp' par LeoC76 (https://github.com/LeoC76) dans le cadre du Projet 3 de BTS SIO.
